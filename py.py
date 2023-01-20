@@ -1,5 +1,7 @@
-def main(items, price):
-    print(items*price)
+def main():
+    items = input("input number of items: ")
+    price = input("input price per item: ")
+    print(int(items)*int(price))
 
 def calcSales(price):
     if price >= 1000:
@@ -31,5 +33,7 @@ def calc_tax_all(total_price, province):
 def breakdown_sales(total_price):
     stor = calcSales(total_price)
     print("Total Price" + total_price)
-    print("Total Discount" + )
+    print("Total Discount")
 
+
+main()
