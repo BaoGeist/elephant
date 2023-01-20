@@ -5,9 +5,20 @@ def main():
     prov = input("input province: ")
     grossPrice = int(price)*int(items)
     sale = calcSales(grossPrice)
-    calc_tax_all(grossPrice-sale, prov)
-    print("gross price: " + grossPrice)
-    print("sale : " + sale)
+    salesale = grossPrice-sale
+    tax = calc_tax_all(salesale, prov)
+    
+    print("gross price: " + str(grossPrice))
+    print("sale : " + str(sale))
+    
+    print("tax" + str(tax))
+    
+    
+    breakdown_sales(grossPrice)
+    
+    breakdown_sales_tax(grossPrice, prov)
+    
+    
 
 def calcSales(price):
     if price >= 1000:
@@ -32,15 +43,15 @@ def calc_tax_all(total_price, province):
 
 def breakdown_sales(total_price):
     stor = calcSales(total_price)
-    print("Total Price" + total_price)
-    print("Total Discount" + stor)
-    print("Final Price:" + total_price-stor)
+    print("Total Price" + str(total_price))
+    print("Total Discount" + str(stor))
+    print("Final Price:" + str(total_price-stor))
 
 def breakdown_sales_tax(total_price, province):
     stor = calcSales(total_price)
     tax = calc_tax_all(total_price-stor, province)
-    print("Total Price" + total_price)
-    print("Total Discount" + stor)
-    print("Final Price After Tax:" + tax)
+    print("Total Price" + str(total_price))
+    print("Total Discount" + str(stor))
+    print("Final Price After Tax:" + str(tax))
 
 main()
