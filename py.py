@@ -1,3 +1,19 @@
+def main(items, price):
+    print(items*price)
+
+def calcSales(price):
+    if price >= 1000:
+        return 0.03
+    elif price >= 5000:
+        return 0.05
+    elif price >= 7000:
+        return 0.07
+    elif price >= 10000:
+        return 0.1
+    elif price >= 15000:
+        return 0.15
+    return 0
+
 #you start here
 def calcTax(price: int):
     return price*0.13
