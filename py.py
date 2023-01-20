@@ -1,5 +1,6 @@
 #you start here
-print("here")
+def calcTax(price: int):
+    return price*0.13
 
 
 
@@ -12,4 +13,7 @@ def calc_tax_all(total_price, province):
     return total_price*dic_prov[province]
 
 def breakdown_sales(total_price):
-    pass
+    stor = calcSales(total_price)
+    print("Total Price" + total_price)
+    print("Total Discount" + )
+
