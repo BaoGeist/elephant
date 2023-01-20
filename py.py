@@ -1,5 +1,6 @@
 #you start here
-print("here")
+def calcTax(price: int):
+    return price*0.13
 
 
 
